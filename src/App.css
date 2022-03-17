@@ -1,0 +1,68 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+body{
+  background-color:#D5EEBB;
+
+}
+.price{
+  font-size: 30px;
+  font-weight: bold;
+}
+image{
+  margin-top: 30px;
+}
+.start{
+  display:flex;
+  justify-content:center;
+}
+.btnOne{
+  margin-left: 20px;
+  height:40px;
+  align-self: center;
+}
+.btn{
+  margin-right: 20px;
+  height:40px;
+  align-self: center;
+}
+.text{
+  text-align: center;
+  font-size: 18px;
+}
+h1{
+  color:#7FC8A9;
+  font-size: 55px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow:2px 2px #444941;
+}
+h2{
+  font-size: 40px;
+  color: #7FC8A9;
+  text-shadow:2px 2px #444941;
+  font-family: 'Roboto', sans-serif;
+}
+.box{
+  font-size: 35px;
+  color: #444941;
+}
+.btnShow{
+  border: none;
+  background-color:#9CC094 ;
+  font-family: 'Roboto', sans-serif;
+}
+.btnRemove{
+  background: #444941;
+  color: #fff;
+  margin-top: 10px;
+  padding:10px;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+
+}
+.top{
+  font-size: 45px;
+  color: #5F7A61;
+  font-family: 'Roboto', sans-serif;
+}

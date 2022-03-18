@@ -40,7 +40,7 @@ function App(){
     item.showMore = !item.showMore;
     setShowText(!showText)
   }
-  const textShow = () => {
+  const textShow = (gift) => {
     gift.readMore = !gift.readMore;
     setShowSlide(!showSlide);
     console.log(showSlide)
@@ -58,7 +58,7 @@ function App(){
     </div>
     <div className="container"> 
     <p className="text">{readMore ? description : description.substring(0,140)+"..." }
-    <button onClick={() => textShow()}>{readMore ? "readLess" : "readMore"}</button></p>
+    <button onClick={() => textShow(gift)}>{readMore ? "readLess" : "readMore"}</button></p>
     </div>
     <div className="container price">
       $ {price}

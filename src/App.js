@@ -5,7 +5,7 @@ import './App.css';
 
 function App(){
   const[gift,setGift]=useState(0);
-  const{price,description,image,readMore} = data[gift];
+  const{price,description,image} = data[gift];
   const[showSlide,setShowSlide] = useState(false);
   
 
@@ -24,7 +24,7 @@ function App(){
   const nextButton =() =>{
      setGift((gift=>{
        gift++;
-       if(gift > gift.length-1) {
+       if(gift > data.length-1) {
          gift = 0;
        }
          return gift
@@ -40,10 +40,10 @@ function App(){
     item.showMore = !item.showMore;
     setShowText(!showText)
   }
-  const textShow = (gift) => {
-    gift.readMore = !gift.readMore;
+  const textShow = (data)=> {
+    data.readMore = !data.readMore;
     setShowSlide(!showSlide);
-    console.log(showSlide)
+    console.log(data)
   }
 
   return(
@@ -57,8 +57,8 @@ function App(){
      <button className="btnOne" onClick={nextButton}>▶</button>
     </div>
     <div className="container"> 
-    <p className="text">{readMore ? description : description.substring(0,140)+"..." }
-    <button onClick={() => textShow(gift)}>{readMore ? "readLess" : "readMore"}</button></p>
+    <p className="text">{showSlide ? description : description.substring(0,140)+"..." }
+    <button onClick={() => textShow(data)}>{showSlide ? "readLess" : "readMore"}</button></p>
     </div>
     <div className="container price">
       $ {price}
@@ -66,7 +66,7 @@ function App(){
 
     <hr></hr>
     <div className="container">
-    <h2>{ list.length }  Gifts for Wine Lovers Who Have Everything</h2>
+    <h2>{ ideas.length }  Gifts for Wine Lovers Who Have Everything</h2>
     </div>
     {ideas.map((item => {
       const {id,name,description,image,price,showMore} = item;

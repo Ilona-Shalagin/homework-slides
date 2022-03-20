@@ -58,7 +58,7 @@ function App(){
     </div>
     <div className="container"> 
     <p className="text">{showSlide ? description : description.substring(0,140)+"..." }
-    <button onClick={() => textShow(data)}>{showSlide ? "readLess" : "readMore"}</button></p>
+    <button className="btnShow" onClick={() => textShow(data)}>{showSlide ? "readLess" : "readMore"}</button></p>
     </div>
     <div className="container price">
       $ {price}
